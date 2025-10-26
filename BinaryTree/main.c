@@ -16,10 +16,8 @@ int main()
         bintree_insert(bintree, numbers[i]);
     }
 
+    bintree_remove(bintree, 30);
+
     bintree_inorder(bintree_get_root(bintree));
-    printf("\n");
-    bintree_preorder(bintree_get_root(bintree));
-    printf("\n");
-    bintree_posorder(bintree_get_root(bintree));
 
 }

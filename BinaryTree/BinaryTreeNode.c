@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <BinaryTreeNode.h>
 #include <stdlib.h>
 
 typedef struct BinaryTreeNode{
@@ -15,6 +16,28 @@ BinaryTreeNode *bintree_node_create()
     node->right = NULL;
 
     return node;
+}
+
+void bintree_node_free(BinaryTreeNode *node)
+{
+    free(node);
+}
+
+BinaryTreeNode *bintree_node_higher_node(BinaryTreeNode *node, BinaryTreeNode **parent)
+{
+    BinaryTreeNode *current = node;
+    BinaryTreeNode *right;
+    while(current){
+        right = bintree_node_get_right(current);
+        if(!right) break;
+        *parent = current;
+        current = right;
+        
+    }
+
+    return current;
+    
+
 }
 
 void bintree_node_set_left(BinaryTreeNode *node, BinaryTreeNode *left)

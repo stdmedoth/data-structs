@@ -20,7 +20,7 @@ void bintree_preorder(BinaryTreeNode *node);
 
 void bintree_posorder(BinaryTreeNode *node);
 
-int bintree_remove(BinaryTree *bintree, int value);
+void bintree_remove(BinaryTree *bintree, int value);
 
 
 
