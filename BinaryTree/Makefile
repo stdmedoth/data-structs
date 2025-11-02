@@ -1,10 +1,10 @@
 CC=gcc
 
-%.o: %.c $(INCLUDES)
+%.o: %.c
 	$(CC) -g  -c -o $@ $< -I .
 
 main: BinaryTree.o BinaryTreeNode.o main.o
-	$(CC) -g -o $@ $^ $(CFLAGS)
+	$(CC) -g -o $@ $^ 
 
 clear:
 	rm *.o main
